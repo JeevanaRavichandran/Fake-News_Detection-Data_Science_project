@@ -7,7 +7,7 @@ with open('fake_news_model.pkl', 'rb') as f:
     model = pickle.load(f)
 
 with open('tfidf_vectorizer.pkl', 'rb') as f:
-    vectorizer = pickle.load(f)
+    vectorizer =pickle.load(f)
 
 def clean_text(text):
     text = re.sub(r'http\S+', '', text)
