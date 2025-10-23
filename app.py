@@ -1,5 +1,5 @@
 import streamlit as st
-import joblib
+import pickle
 import re
 
 # Load model and vectorizer
