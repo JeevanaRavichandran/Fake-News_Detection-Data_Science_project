@@ -1,13 +1,10 @@
 import streamlit as st
-import pickle
+import joblib
 import re
 
 # Load model and vectorizer
-with open('fake_news_model.pkl', 'rb') as f:
-    model = pickle.load(f)
-
-with open('tfidf_vectorizer.pkl', 'rb') as f:
-    vectorizer = pickle.load(f)
+model = joblib.load('fake_news_model.pkl')
+vectorizer = joblib.load('tfidf_vectorizer.pkl')
 
 def clean_text(text):
     text = re.sub(r'http\S+', '', text)
